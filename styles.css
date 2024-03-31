@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  max-width: 1200px;
+  margin: auto;
+  background: lightblue;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #94d2e9;
+  height: 100px;
+  width: 100%;
+  border-bottom: 2px solid salmon;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 80%;
+  padding-inline: 16px;
+}
+/* ----- Navbar ----- */
+.branding-name {
+  display: flex;
+  font-size: 30px;
+  font-weight: bold;
+}
+p.text-pink {
+  color: deeppink;
+}
+p.text-white {
+  color: white;
+}
+.menu {
+  display: flex;
+  gap: 8px;
+  text-transform: uppercase;
+}
+.menu li {
+  display: flex;
+  list-style: none;
+}
+
+.menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 16px;
+  width: 90px;
+  height: 30px;
+  padding-inline: 20px;
+}
+.menu a:hover {
+  color: rgb(71, 21, 199);
+  font-weight: bold;
+}
+.menu a.actived {
+  background-color: violet;
+}
+/* ----- Show Side ----- */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #94d2e9;
+  height: 400px;
+  background: url("https://picsum.photos/id/2/1500/500/?blur=4") no-repeat;
+  background-size: cover;
+}
+section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.text-top h1 {
+  color: white;
+  font-size: 66px;
+  font-weight: bold;
+}
+.text-para p {
+  text-align: center;
+  width: 768px;
+  color: deeppink;
+  font-size: 20px;
+}
+/* --------E-mail Input-------- */
+.email-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  background-color: lightskyblue;
+}
+.text-left h1 {
+  color: salmon;
+  font-size: 22px;
+}
+.email-box input {
+  width: 250px;
+  height: 35px;
+  padding: 4px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  border: none;
+}
+.email-box button {
+  height: 35px;
+  padding-inline: 20px;
+  border-radius: 4px;
+  color: white;
+  background-color: coral;
+  border: none;
+}
+.email-box button:hover {
+  padding-inline: 18px;
+  border-radius: 4px;
+  color: coral;
+  background-color: white;
+  border: 2px solid coral;
+}
+/* -------- Main content-------- */
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #94d2e9;
+  height: auto;
+}
+main .container {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  padding: 10px 0;
+}
+.card-img img {
+  height: 120px;
+}
+.card-title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-block: 10px;
+}
+.card-detail {
+  text-align: justify;
+}
+/* --------about us-------- */
+.content-about,
+.content-service {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 220px);
+}
+.content-about .container,
+.content-service .container {
+  display: flex;
+  align-items: unset;
+}
+.txt-box-left {
+  margin-top: 10px;
+  padding: 1.5rem;
+  flex: 1 0 70%;
+}
+.txt-box-left h1 {
+  font-size: 21px;
+}
+.txt-box-left p {
+  font-size: 18px;
+  text-align: justify;
+}
+.txt-box-rigth {
+  background-color: violet;
+  padding: 15px;
+  color: white;
+  margin-top: 35px;
+  border-radius: 4px;
+}
+.txt-box-rigth h1 {
+  font-size: 21px;
+}
+.txt-box-rigth p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.txt-box-left li {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* --------footer-------- */
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: lightskyblue;
+}
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 62px;
+}
+footer p {
+  color: white;
+  font-size: 15px;
+}
+
+/* ----------------------  Responsive ----------------------*/
+@media (max-width: 900px) {
+  .container {
+    padding: 0;
+  }
+  .text-top h1 {
+    color: white;
+    font-size: 55px;
+    text-align: center;
+  }
+  main {
+    align-items: baseline;
+    min-height: calc(100vh - 620px);
+  }
+
+  /* -------------------------------------------- */
+  @media (max-width: 700px) {
+    body {
+      max-width: 700px;
+    }
+    nav {
+      align-items: end;
+    }
+    nav .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: center;
+      height: 92px;
+    }
+    .text-top h1 {
+      font-size: 44px;
+    }
+    .text-para p {
+      font-size: 16px;
+    }
+
+    .email-input {
+      height: fit-content;
+      padding: 16px;
+    }
+    .email-input .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: fit-content;
+    }
+    .email-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .email-box input {
+      width: 560px;
+    }
+    .email-box button {
+      width: 560px;
+    }
+    main .container {
+      justify-content: center;
+      gap: 56px;
+    }
+    .card {
+      width: 80%;
+    }
+    .content-about .container,
+    .content-service .container {
+      flex-direction: column;
+    }
+    .content-about, .content-service {
+        min-height: 810px;
+    }
+  }
+
+  @media (max-width: 555px) {
+    body {
+      max-width: 555px;
+    }
+
+    .email-box input,
+    .email-box button {
+      width: 420px;
+    }
+  }
+  main .container {
+    justify-content: center;
+    gap: 56px;
+  }
+  .card {
+    width: 80%;
+  }
+
+.content-service {
+    min-height: 860px;
+}
+}
